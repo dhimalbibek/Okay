@@ -1,0 +1,377 @@
+{% extends 'index.html' %} {% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>App Haru Pvt Ltd</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- navbar open -->
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-left: 500px;">
+    <div class="container-fluid">
+      <a class="navbar-brand active" href="#"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-address-card"></i>About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><i class="fa-brands fa-usps"></i>Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><i class="fa-solid fa-address-book"></i>Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><i class="fa-solid fa-user-shield"></i>Projects</a>
+          </li>
+
+        </ul>
+        </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- close navbar -->
+
+
+  <!--open home page -->
+
+
+  <div style="
+        padding-top: 150px; height: 700px;
+        background: rgb(4, 4, 38);
+        padding-left: 150px;
+      ">
+    <div class="row">
+      <div class="col">
+        <h1 style="color: aliceblue;">Imagine and <br> Dream up to <br> Create</h1>
+        <hr />
+        <h3 style="color: aliceblue;">
+          We work closely with you to digitize your business that achieves
+          your goals.
+        </h3>
+        <hr />
+        <button class="but" style="color: white; height: 70px; width: 200px; transition: 1s;">Get Started<i
+            class="fa-solid fa-arrow-right" style="color: black; width: 50px;"></i></button>
+      </div>
+      <div class="col">
+        <div class="container">
+          <img id="img" style="height: 300px; width: 400px; padding-left: 100px"
+            src="data:image/png;base64,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"
+            alt="" />
+          <canvas id="canvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- close home page  -->
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <!-- open Fact part -->
+
+
+
+  <h4 style="color: blue; margin-left: 100px; background-color: aliceblue; border: 2px salmon; border-radius: 10px; ">
+    Facts</h4>
+  <br />
+  <h1 style="text-align: center">Some Quick Facts</h1>
+  <br />
+  <div style="padding-left: 50px">
+    <div class="row">
+      <div class="col">
+        <img src="https://appharu.com/images/facts-bg.svg" style="width: 600px; height: 600px" alt="" />
+      </div>
+      <div class="col" style="padding-top: 250px">
+        <h3>
+          60+ <br />
+          In-House <br />
+          Engineers
+        </h3>
+      </div>
+      <div class="col" style="padding-top: 250px">
+        <h3>
+          600+ <br />
+          Active Status <br />
+          Clients
+        </h3>
+      </div>
+      <div class="col" style="padding-top: 250px">
+        <h3>
+          <h3>
+            1000+ <br />
+            Successful <br />
+            Projects
+          </h3>
+        </h3>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- close fact part -->
+
+
+  <!-- open about us  -->
+
+
+
+  <div class="container">
+    <h3>About Us</h3>
+    <br />
+    <div class="row">
+      <div class="col">
+        <h3>Professional and creative web development solution</h3> <br> Appharu is an IT
+        consultancy and experienced solution provider. We strive to deliver
+        the best customer service and offer a flexible approach to exceed the
+        expectations of our clients while maintaining resonability.
+        <br />
+        <i class="fa-solid fa-shield-check"></i>
+        <h3 style="color: rgb(10, 10, 139);"><i class="fa-solid fa-square-check"></i>Founded in 2017</h3>
+        <h3 style="color: rgb(10, 10, 139);"><i class="fa-solid fa-square-check"></i>1000+ Websites created</h3>
+        <h3 style="color: rgb(10, 10, 139);"><i class="fa-solid fa-square-check"></i>Reliable and trustworthy</h3>
+      </div>
+      <div class="col">
+        <img src="https://appharu.com/about-img-2.jpg" style="height: 400px; width: 400px" alt="" />
+      </div>
+      <div class="col">
+        <img src="https://appharu.com/about-img-1.jpg" style="height: 400px; width: 400px" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <button class="but" style="color: white; height: 70px; width: 200px;">Get Started<i class="fa-solid fa-arrow-right"
+        style="color: black; width: 50px;"></i></button>
+  </div>
+
+
+  <!-- close about us -->
+
+
+
+
+  <br />
+
+
+
+  <!-- open projects -->
+
+
+
+
+
+  <div class="container">
+    <h2 style="margin-top: 40px; text-shadow: 50px; color: blue; margin-left: 100px;">Projects</h2>
+  </div>
+  <div>
+    <h2 style="text-align: center; color: #01013f;">Projects We Worked On</h2>
+    <div class="container">
+      <div class="row">
+        
+        <div class="col-md-4  mt-4 ">
+          <div class="ps-2 image">
+            <img class="text-center " src="https://appharu.com/images/projects/khabarhub.png"
+              style="height: 200px; width: 300px" alt="" />
+          </div>
+        </div>
+        <div class="col-md-4  mt-4 ">
+          <div class="ps-2 image">
+            <img class="text-center " src="https://appharu.com/images/projects/khabarhub.png"
+              style="height: 200px; width: 300px" alt="" />
+          </div>
+        </div>
+        <div class="col-md-4  mt-4 ">
+          <div class="ps-2 image">
+            <img class="text-center " src="https://appharu.com/images/projects/khabarhub.png"
+              style="height: 200px; width: 300px" alt="" />
+          </div>
+        </div>
+        <div class="col-md-4  mt-4 ">
+          <div class="ps-2 image">
+            <img class="text-center " src="https://appharu.com/images/projects/khabarhub.png"
+              style="height: 200px; width: 300px" alt="" />
+          </div>
+        </div>
+        <div class="col-md-4  mt-4 ">
+          <div class="ps-2 image">
+            <img class="text-center " src="https://appharu.com/images/projects/khabarhub.png"
+              style="height: 200px; width: 300px" alt="" />
+          </div>
+        </div>
+        <div class="col-md-4  mt-4 ">
+          <div class="ps-2 image">
+            <img class="text-center " src="https://appharu.com/images/projects/khabarhub.png"
+              style="height: 200px; width: 300px" alt="" />
+          </div>
+        </div>
+       
+       
+       
+       
+       
+       
+
+
+      </div>
+    </div>
+    <button class="but" style="margin-left: 1300px;">See More</button>
+
+
+    <!-- close projects -->
+
+
+    <!-- open tools and technology -->
+
+
+    <div class="container" style="margin-top: 100px">
+      <h3 style="color: blueviolet">Tools and technology</h3>
+    </div>
+    <div>
+      <h2 style="text-align: center; color: blue">
+        Tools and Technologies We Use
+      </h2>
+      <p style="text-align: center">
+        Start building fast, beautiful and modern looking websites in no time
+        using these tools.
+      </p>
+    </div>
+
+    <div style="margin-left: 400px">
+      <img src="https://appharu.com/images/tools/html.png" style="height: 100px; width: 100px" alt="" />
+      <img src="https://appharu.com/images/tools/css.png" style="height: 100px; width: 100px" alt="" />
+      <img src="https://appharu.com/images/tools/js.png" style="height: 100px; width: 100px" alt="" />
+      <img src="https://appharu.com/images/tools/bootstrap.png" style="height: 100px; width: 100px" alt="" />
+      <img src="https://appharu.com/images/tools/wordpress.png" style="height: 100px; width: 100px" alt="" />
+      <img src="https://appharu.com/images/tools/mysql.png" style="height: 100px; width: 100px" alt="" />
+    </div>
+    <button class="but" style="margin-left: 1300px;">See More</button>
+
+
+    <!-- close tools and technology -->
+
+
+    <!-- open contact us -->
+
+
+
+    <div class="container">
+      <h2 style="margin-top: 100px; color: blue;">Contact Us</h2>
+    </div>
+    <h3 style="text-align: center; color: rgb(4, 4, 111);">Contact us to get your Website ready</h3>
+
+    <br />
+    <br />
+    <div class="bg-primary">
+      <div class="container p-5">
+        <div class="row align-items-center">
+          <div class="col-md-4 fist-color">
+            <h4>
+              <i class="fa-solid fa-envelope" style="height: 50px;"></i> Email Us: <br />
+              info@appharu.com
+            </h4>
+          </div>
+          <div class="col-md-4 fist-color2" >
+            <h4>
+              <i class="fa-duotone fa-phone-volume" style="height: 50px;"></i> Phone <br /> <br>
+              01459565
+            </h4>
+            <SPAN class="mji">muji </SPAN>
+          </div>
+          <div class="col-md-4 fist-color3">
+            <h4 >
+              <i class="fa-solid fa-location-dot" style="height: 50px;"></i>Address <br />
+              Mid Baneshwor <br />
+              Kathmandu
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- close contact us -->
+
+
+
+    <!-- footer section  -->
+    <div class="container" style="margin-top: 100px">
+      <div class="row">
+        <div class="col">
+          <img src="https://appharu.com/logo.png" style="height: 100px; width: 100px" alt="" />
+        </div>
+        <div class="col">
+          <h2>App Haru</h2>
+        </div>
+        <div class="col">About</div>
+        <div class="col">Services</div>
+        <div class="col">Contact</div>
+        <div class="col">Privacy Policy</div>
+        <div class="col">Financial Policy</div>
+        <div class="col">Careers</div>
+        <div class="col">FAQ</div>
+      </div>
+
+      <hr>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h4>Email:</h4>
+            <p>billing@appharu.com</p>
+            <p>info@appharu.com</p>
+          </div>
+          <div class="col">
+            <h4>Phone</h4>
+            <p>+977-1-4598540</p>
+            <p>+977 9851218119</p>
+          </div>
+          <div style="margin-left: 200px;" class="col">Connect with us: <br>
+            <i class="fa-brands fa-facebook" style="color: blue;"></i> <i class="fa-brands fa-linkedin"
+              style="color: rgb(86, 86, 252);"></i> <i class="fa-brands fa-github" style="color: black;"></i>
+          </div>
+        </div>
+      </div>
+
+      <p style="text-align: center;">Located at Mid-Baneshwor near Ratnarajya School and opposite of Chimeki Lagubitta.
+        <br>
+        © 2017 - 2022 Appharu. All rights reserved.</p>
+
+
+      <!-- close footer -->
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"
+        src="https://kit.fontawesome.com/4d94fcf695.js" crossorigin="anonymous">
+
+        
+
+
+        </script>
+</body>
+
+</html>
+
+{% endblock %}

@@ -1,0 +1,41 @@
+/* body {
+  background-color: blue;
+} */
+.but {
+  background-color: #5252bd;
+  transition: 0.3s;
+  border-radius: 25px;
+}
+.but:hover {
+  background-color: red;
+  border-radius: 0;
+}
+.active {
+  transition: 0.3s;
+}
+.active:hover {
+  background-color: red;
+}
+.image {
+  background-image: url("https://www.appharu.com/projects-bg-img-1.jpg");
+}
+
+.fist-color {
+  color: gold;
+}
+.fist-color2 {
+  color: red;
+  transition: 0.3s;
+}
+.fist-color2:hover {
+  color: red;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  visibility: visible;
+}
+.mji {
+  visibility: hidden;
+}
+
+.fist-color2:hover .mji {
+  visibility: visible;
+}

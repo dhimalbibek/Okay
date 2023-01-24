@@ -1,7 +1,11 @@
 from django.shortcuts import render
-from shop.models import About
+from shop.models import category
+
 
 # Create your views here.
+
 def index(request):
-    info = About.objects.all()
-    return render(request, 'main.html', {'info':info})
+    show = category.objects.all()
+    return render(request, 'main.html', {'show': show})
+
+
